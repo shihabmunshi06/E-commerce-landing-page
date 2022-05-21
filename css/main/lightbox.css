@@ -1,0 +1,100 @@
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  80% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  80% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.lightbox {
+  z-index: 3000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+}
+
+.lightbox::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.lightbox .btn-window-wrapper {
+  z-index: 3001;
+  margin-top: 3rem;
+  width: 48rem;
+  aspect-ratio: 1;
+  border-radius: 1.6rem;
+  animation: moveInLeft 0.8s;
+}
+.lightbox .btn-window-wrapper .img-window .slider {
+  --slider-index: 0;
+  width: calc(48rem * 4);
+  transform: translateX(calc(var(--slider-index) * -48rem));
+}
+.lightbox .btn-window-wrapper .mover {
+  z-index: 3001;
+}
+.lightbox .btn-window-wrapper .back {
+  transform: translate(-50%, -50%);
+}
+.lightbox .btn-window-wrapper .next {
+  transform: translate(50%, -50%);
+}
+.lightbox .btn-window-wrapper .close {
+  z-index: 3001;
+  position: absolute;
+  right:calc(0% - .5rem) ;
+  bottom: calc(100% + 1rem);
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  stroke: white;
+}
+.lightbox .btn-window-wrapper .close:hover{
+  stroke: var(--Orange);
+}
+.lightbox .card-wrapper {
+  height: 9rem;
+  width: 48rem;
+  gap: 3rem;
+  z-index: 3001;
+  animation: moveInRight 0.8s;
+}
+.lightbox .card-wrapper .card{
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+

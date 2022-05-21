@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main/root.css" />
+    <link rel="stylesheet" href="./css/main/header.css" />
+    <link rel="stylesheet" href="./css/main/lightbox.css" />
+    <link rel="stylesheet" href="./css/main/left.css" />
+    <link rel="stylesheet" href="./css/main/right.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/z-index.css" />
+
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <div id="root">
+      <header class="flex">
+        <div class="logo-menu">
+          <div class="menu">
+            <img src="./images/icon-menu.svg" alt="menu icon" />
+          </div>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+        </div>
+
+        <div class="nav-div">
+          <div class="nav-div-mobile">
+            <div class="close">
+              <img src="./images/icon-close.svg" alt="close icon" />
+            </div>
+            <nav class="flex">
+              <a href="">Collections</a>
+              <a href="">Men</a>
+              <a href="">Women</a>
+              <a href="">About</a>
+              <a href="">Contact</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="right flex">
+          <div class="cartIcon-div">
+            <span></span>
+            <svg
+              class="cartIcon-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+          </div>
+          <div class="avatar">
+            <img src="./images/image-avatar.png" alt="your avatar" />
+          </div>
+        </div>
+
+        <div class="checkout-div">
+          <h1>Cart</h1>
+          <div class="products-details">
+            <p class="nothing">your cart is empty</p>
+            <div class="main flex">
+              <div class="ordered-product-img-div">
+                <img
+                  class="product-img-div__product-img"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="your selected product"
+                />
+              </div>
+              <p>
+                Fall Limited Edition Sneakers
+                <br />
+                $125.00 x
+                <span class="count"></span>
+                <span class="total"></span>
+              </p>
+              <div class="before-checkout__delete">
+                <img src="./images/icon-delete.svg" alt="delete icon" />
+              </div>
+              <button>Checkout</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="lightbox flex img-thumb-wrapper">
+        <div class="btn-window-wrapper">
+          <svg
+            class="close"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+          <div class="back mover flex">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </div>
+          <div class="next mover flex">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+          <div class="img-window">
+            <div class="slider flex">
+              <img src="./images/image-product-1.jpg" alt="product image" />
+              <img src="./images/image-product-2.jpg" alt="product image" />
+              <img src="./images/image-product-3.jpg" alt="product image" />
+              <img src="./images/image-product-4.jpg" alt="product image" />
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper flex">
+          <div class="0 card active">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+          </div>
+          <div class="1 card">
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+          </div>
+          <div class="2 card">
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+          </div>
+          <div class="3 card">
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="product thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+
+      <main class="flex">
+        <div class="left img-thumb-wrapper flex col">
+          <div class="btn-window-wrapper">
+            <div class="back mover flex">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </div>
+            <div class="next mover flex">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+
+            <div class="img-window">
+              <div class="slider flex">
+                <img src="./images/image-product-1.jpg" alt="product image" />
+                <img src="./images/image-product-2.jpg" alt="product image" />
+                <img src="./images/image-product-3.jpg" alt="product image" />
+                <img src="./images/image-product-4.jpg" alt="product image" />
+              </div>
+            </div>
+          </div>
+          <div class="card-wrapper flex">
+            <div class="0 card active">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="1 card">
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="2 card">
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="3 card">
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <span>SNEAKER COMPANY</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="prices">
+            <p class="price flex">
+              $125.00
+              <span>50%</span>
+            </p>
+            <p class="stroke">$250.00</p>
+          </div>
+
+          <div class="bottom">
+            <div class="input-div">
+              <input
+                type="number"
+                name="amount"
+                class="amount"
+                value="0"
+              />
+              <svg
+                class="volume minus"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="4"
+                stroke-linecap="line"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg
+                class="volume plus"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="4"
+                stroke-linecap="line"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </div>
+            <button aria-label="add to cart" class="add-to-cart flex">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path
+                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                />
+              </svg>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="function.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+.right > span {
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  color: var(--Orange);
+}
+.right h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.right .text {
+  letter-spacing: 0.07rem;
+  line-height: 1.8;
+  color: var(--Dark_grayish_blue);
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.right .prices {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-direction: column;
+}
+
+/* added flex on price to center the span  */
+.right .prices .price {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.right .price span {
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  background-color: var(--Pale_orange);
+  color: var(--Orange);
+  margin-left: 1.6rem;
+}
+
+.right .stroke {
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  color: var(--Dark_grayish_blue);
+  opacity: 0.8;
+}
+
+.right .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.right .bottom .input-div {
+  width: 14rem;
+  height: 3rem;
+}
+.input-div .amount::-webkit-outer-spin-button,
+.input-div .amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-div .amount[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.right .bottom .input-div input {
+  height: 100%;
+  width: 100%;
+  background-color: var(--Light_grayish_blue);
+  color: var(--very-dark-blue);
+  text-align: center;
+  font-weight: 700;
+}
+/* extra paddint for more clickability  */
+.right .bottom .input-div svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2.8rem;
+  width: 3.2rem;
+  stroke: var(--Orange);
+  cursor: pointer;
+  padding: 0.4rem .6rem;
+}
+.right .bottom .input-div svg:hover {
+  opacity: 0.6;
+}
+.right .bottom .input-div .minus {
+  left: 0;
+}
+.right .bottom .input-div .plus {
+  right: 0;
+}
+
+.right .bottom button {
+  width: 26rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: var(--Orange);
+  gap: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.right .bottom button:hover {
+  opacity: 0.8;
+}
+.right .bottom button svg {
+  height: 2rem;
+  aspect-ratio: 1;
+  stroke: var(--Light_grayish_blue);
+}

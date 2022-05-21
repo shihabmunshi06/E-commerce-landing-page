@@ -1,0 +1,102 @@
+main {
+  width: 80%;
+  gap: 8%;
+  margin: auto;
+}
+/* 88vh so that it always takes full view height and things are in the middle*/
+main .left {
+  height: 88vh;
+  gap: 3rem;
+  
+}
+/* button designs */
+.left .btn-window-wrapper .mover {
+  display: none;
+}
+.btn-window-wrapper .mover {
+  z-index: 1001;
+  position: absolute;
+  top: 50%;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.btn-window-wrapper .mover:hover svg{
+  stroke: var(--Orange);
+}
+.btn-window-wrapper .mover svg{
+  stroke: var(--very_dark_blue);
+  height: 2.4rem;
+  aspect-ratio: 1;
+}
+.btn-window-wrapper .back {
+  left: 0;
+  transform: translateY(-50%);
+}
+.btn-window-wrapper .next {
+  right: 0;
+  transform: translateY(-50%);
+}
+/* cant put percenage of main . left cause it leasd to sme weird dimensions */
+main .left .btn-window-wrapper {
+  height: 49vh;
+  min-height: 40rem;
+  max-height: 50rem;
+  aspect-ratio: 1;
+  border-radius: 3%;
+}
+.img-window {
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.img-window .slider {
+  height: 100%;
+  --slider-index: 0;
+  width: calc(100% * 4);
+  transform: translateX(calc(var(--slider-index) * -25%));
+  transition: transform 0.3s linear;
+}
+main .img-window .slider{
+  cursor: pointer;
+}
+
+.left .card-wrapper {
+  height: 10vh;
+  min-height: 8rem;
+  max-height: 12rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+.left .card-wrapper .card {
+  height: 100%;
+  border-radius: 8%;
+  cursor: pointer;
+}
+.card-wrapper .card img {
+  border-radius: inherit;
+}
+.card-wrapper .card::after {
+  content: "";
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--Pale_orange);
+  border-radius: inherit;
+  opacity: 0.5;
+}
+
+.card-wrapper .card:hover::after,
+.card-wrapper .card.active::after {
+  display: inline-block;
+}
+.card-wrapper .card.active {
+  outline: 2px solid var(--Orange);
+}

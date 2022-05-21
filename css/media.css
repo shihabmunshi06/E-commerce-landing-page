@@ -1,0 +1,246 @@
+@media screen and (max-width: 1050px) {
+  header {
+    margin: 0 6%;
+  }
+  header .nav-div {
+    margin-left: 3rem;
+  }
+  header nav,
+  header .right {
+    gap: 3rem;
+  }
+
+  main {
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .lightbox {
+    display: none;
+  }
+  header .menu,
+  header .logo {
+    display: inline-block;
+  }
+  header .menu {
+    height: 2rem;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+  header .logo-menu {
+    margin-right: auto;
+  }
+  header .nav-div {
+    z-index: 2004;
+    margin-left: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path 0.3s linear;
+  }
+  header .nav-div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.75;
+  }
+  header .nav-div.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  header .nav-div .close {
+    display: inline-block;
+    height: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+  header .nav-div .nav-div-mobile {
+    z-index: 2005;
+    background-color: white;
+    height: 100%;
+    width: 70%;
+  }
+  header .nav-div .nav-div-mobile nav {
+    z-index: 2006;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: fit-content;
+    width: fit-content;
+    gap: 1rem;
+    left: 35%;
+    top: 10%;
+  }
+  header .nav-div .nav-div-mobile nav a {
+    padding: 0.8rem;
+    color: var(--very-dark-blue);
+  }
+  header .nav-div .nav-div-mobile nav a::after {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    width: 70%;
+    min-width: 56rem;
+  }
+  /* declaring width to cuase it was dependant on the width of hardcoded widnto width now it takes full width availble to the main */
+  main .left {
+    width: 100%;
+    /* height is 88vh */
+  }
+  /* takes full width of left instead of hardcoded width of 49vh aspect ratio-1, instede 70vh cause 88vh is available*/
+  main .left .btn-window-wrapper {
+    width: 100%;
+    height: 70vh;
+    aspect-ratio: unset;
+  }
+  main .left .btn-window-wrapper .img-window .slider {
+    cursor: default;
+  }
+  main .right {
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-height: 950px) and (max-width: 960px) and (min-width: 600px) {
+  /* works in more than 950 height and 600-960 width  */
+  main .left {
+    height: 50vh;
+    /* cuase full 88vh is too much for such large height  */
+  }
+  /* height is no longer hard coded 70 cause again too much height */
+  main .left .btn-window-wrapper {
+    height: 100%;
+    max-height: unset;
+  }
+  .card-wrapper {
+    display: none;
+  }
+  .left .btn-window-wrapper .mover {
+    display: flex;
+  }
+}
+@media screen and (max-height: 750px) and (max-width: 960px) {
+  /* works in less than 750 height and less 960 width */
+
+  /* card wrapper is gone and takes the full height caue less height is available for both  */
+  main .left .btn-window-wrapper {
+    height: 100%;
+    /* need to unset the maximum height  */
+    max-height: unset;
+  }
+  .card-wrapper {
+    display: none;
+  }
+  .left .btn-window-wrapper .mover {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* image viewport is narrow so unsetting the max-wdith to make it felxible and main width 90% for some breating space around it */
+  main {
+    width: 90%;
+    min-width: unset;
+  }
+  /* declailng left value cause it no longer takes view height of 70vh*/
+  main .left {
+    height: 30vh;
+  }
+  /* button window wrapper no longer takes 70vh rather 100 percent of left height declared*/
+  main .left .btn-window-wrapper {
+    height: 100%;
+    min-height: unset;
+    border-radius: 0;
+  }
+  .card-wrapper {
+    display: none;
+  }
+
+  .left .btn-window-wrapper .mover {
+    display: flex;
+  }
+}
+
+@media screen and (max-height: 750px) and (max-width: 600px) {
+  /* just a little bit more height cause 30vh is too less in this criteria */
+  main .left {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .right {
+    gap: 2rem;
+  }
+  header .logo img {
+    height: 1.8rem;
+    margin-bottom: 0.4rem;
+    /* fixing wierd height issue */
+  }
+
+  header .menu {
+    margin-right: 2rem;
+  }
+  header .right .avatar {
+    height: 4rem;
+    margin-bottom: 0.6rem;
+    /* fixing wierd height issue */
+  }
+
+  main {
+    width: 100%;
+  }
+  main .right {
+    padding: 2rem;
+  }
+  main .right .prices {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main .right .bottom {
+    flex-direction: column;
+  }
+  /* need important cause the main tags are smore specific */
+  main .right .bottom > * {
+    width: 100% !important;
+    max-width: 35rem;
+  }
+
+  /* font sizes  */
+  /* font sizes  */
+  main .right > span {
+    font-size: 1.2rem;
+  }
+  main .right h1 {
+    font-size: 2.8rem;
+  }
+  main .right .text {
+    font-size: 1.4rem;
+  }
+  main .right .prices .price {
+    font-size: 2.8rem;
+  }
+
+  header .checkout-div {
+    height: 26rem;
+    width: 100%;
+    top: calc(100% + 1vh);
+  }
+  header .checkout-div > h1 {
+    height: 23%;
+  }
+  .checkout-div .products-details {
+    height: 77%;
+  }
+}

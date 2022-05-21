@@ -1,0 +1,199 @@
+header {
+  height: 12vh;
+  max-height: 10rem;
+  position: sticky;
+  margin: 0 10%;
+  justify-content: flex-end !important;
+  background-color: var(--Light_grayish_blue);
+  border-bottom: 1px solid #e8e7ec;
+  z-index: 2001;
+}
+
+header .menu {
+  display: none;
+}
+
+header .logo {
+  height: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+header .nav-div {
+  height: 100%;
+  margin-left: 5.6rem;
+  margin-right: auto;
+}
+header .nav-div .close {
+  display: none;
+}
+header .nav-div-mobile {
+  height: inherit;
+}
+
+header nav {
+  height: inherit;
+}
+
+header nav a {
+  height: inherit;
+  color: var(--Dark_grayish_blue);
+}
+
+header nav a:hover {
+  color: var(--Very_dark_blue);
+}
+header nav a::after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--Orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s linear;
+}
+
+header nav a:hover::after {
+  transform: scaleX(90%);
+}
+
+header nav,
+header .right {
+  gap: 3.8rem;
+}
+
+header .right > * {
+  cursor: pointer;
+}
+
+header .right .cartIcon-div {
+  padding: 0.5rem;
+}
+/* the counter at top of cart icon */
+header .right .cartIcon-div span.active {
+  width: 1.8rem;
+  height: 1.25rem;
+  border-radius: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--Orange);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  text-align: center;
+  z-index: 2003;
+}
+
+.cartIcon-svg {
+  height: 2.2rem;
+  aspect-ratio: 1;
+  stroke: var(--Dark_grayish_blue);
+}
+.cartIcon-div:hover .cartIcon-svg,
+.cartIcon-svg.active {
+  stroke: var(--very_dark_blue);
+}
+
+header .right .avatar {
+  height: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+header .right .avatar:hover {
+  border: 2px solid var(--Orange);
+}
+
+header .checkout-div {
+  z-index: 2002;
+  width: 36rem;
+  height: 27rem;
+  border-radius: 8px;
+  position: absolute;
+  top: 90%;
+  right: 0;
+  background-color: var(--Light_grayish_blue);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  padding-top: 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  transition: clip-path 0.3s linear;
+}
+
+header .checkout-div.active {
+  clip-path: polygon(-10% 0%, 110% 0%, 110% 110%, -10% 110%);
+}
+
+header .checkout-div > h1 {
+  height: 13%;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  color: var(--very-dark-blue);
+}
+
+.checkout-div .products-details {
+  height: 87%;
+  padding: 2.4rem;
+  border-top: 1px solid #e8e7ec;
+  color: var(--Dark_grayish_blue);
+}
+
+.checkout-div .products-details .nothing {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+}
+.products-details.ordered .nothing {
+  opacity: 0;
+}
+
+.products-details .main {
+  opacity: 0;
+}
+.products-details.ordered .main {
+  gap: 1.6rem;
+  opacity: 1;
+}
+
+.ordered-product-img-div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.4rem;
+}
+.ordered-product-img-div img {
+  border-radius: inherit;
+}
+
+.products-details .main p {
+  color: var(--Dark_grayish_blue);
+  line-height: 2.4rem;
+}
+
+.products-details .main p .total {
+  color: var(--very_dark_blue);
+  font-weight: 700;
+}
+.before-checkout__delete {
+  height: 1.8rem;
+  width: 1.6rem;
+  cursor: pointer;
+}
+.products-details .main button {
+  height: 5.6rem;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  margin-top: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--Orange);
+  color: white;
+  cursor: pointer;
+}

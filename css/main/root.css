@@ -1,0 +1,62 @@
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale_orange: hsl(28, 100%, 94%);
+
+  --very_dark_blue: hsl(220, 13%, 13%);
+  --Dark_grayish_blue: hsl(219, 9%, 45%);
+  --Grayish_blue: hsl(220, 14%, 75%);
+  --Light_grayish_blue: hsl(223, 64%, 98%);
+
+  --bla: 1px solid black;
+  --sal: 1px solid salmon;
+  --aqu: 1px solid aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--Light_grayish_blue);
+  color: var(--very_dark_blue);
+  font-size: 1.6rem;
+}
+.img__wrp {
+  height: 100%;
+  width: 100%;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+a,
+button {
+  display: inline-block;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+}
