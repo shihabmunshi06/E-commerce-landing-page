@@ -150,15 +150,15 @@ header .checkout-div > h1 {
   font-weight: 700;
 }
 .products-details.ordered .nothing {
-  opacity: 0;
+  display: none;
 }
 
 .products-details .main {
-  opacity: 0;
+  display: none;
 }
 .products-details.ordered .main {
   gap: 1.6rem;
-  opacity: 1;
+  display: flex;
 }
 
 .ordered-product-img-div {
