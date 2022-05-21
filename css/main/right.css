@@ -59,6 +59,13 @@
 .right .bottom .input-div {
   width: 14rem;
   height: 3rem;
+  border: var(--sal);
+}
+.right .bottom .input-div label{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  opacity: 0;
 }
 .input-div .amount::-webkit-outer-spin-button,
 .input-div .amount::-webkit-inner-spin-button {
